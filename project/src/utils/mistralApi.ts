@@ -1,7 +1,9 @@
 import MistralClient from "@mistralai/mistralai";
-import { MISTRAL_API_KEY } from "./apikeys";
+const apiKey = import.meta.env.VITE_MISTRAL_API_KEY;
 
-const mistral = new MistralClient(MISTRAL_API_KEY);
+console.log(apiKey);
+
+const mistral = new MistralClient(apiKey);
 
 export interface Message {
   role: "system" | "user" | "assistant";
