@@ -1,5 +1,7 @@
 import MistralClient from "@mistralai/mistralai";
-const {apiKey} = import.meta.env.VITE_MISTRAL_API_KEY;
+const apiKey = import.meta.env.VITE_MISTRAL_API_KEY;
+
+console.log(apiKey);
 
 const mistral = new MistralClient(apiKey);
 
